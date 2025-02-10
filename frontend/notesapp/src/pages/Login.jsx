@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
-import Signup from "./Signup";
+import PasswordInput from "../components/PasswordInput";
 
 export default function Login() {
   return (
@@ -18,6 +18,8 @@ export default function Login() {
                 placeholder="enter your email id"
                 className="border p-2 rounded-lg"
               />
+
+              <PasswordInput />
               <button
                 type="submit"
                 className="bg-black text-white p-2 rounded-lg hover:bg-slate-600"
