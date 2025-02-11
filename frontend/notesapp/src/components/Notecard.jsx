@@ -1,5 +1,5 @@
-import React from 'react'
-import { MdCreate, MdDelete, MdOutlinePushPin } from 'react-icons/md'
+import React from "react";
+import { MdCreate, MdDelete, MdOutlinePushPin } from "react-icons/md";
 
 const Notecard = ({
   title,
@@ -11,27 +11,34 @@ const Notecard = ({
   onDelete,
   onPinNote,
 }) => {
-  
   return (
-    <div className='border shadow-md w-96 p-4 hover:scale-105 mt-10 transition duration-300'>
-      <div>
+    <div className="border shadow-md w-[500px] p-4 hover:scale-105 hover:shadow-2xl mt-10 transition duration-300">
+      <div className="flex items-center justify-between">
         <div>
-          <h6 className='text-lg font-medium '>{title}</h6>
-          <span className='text-sm text-slate-500'>{date}</span>
+          <h6 className="text-lg font-medium ">{title}</h6>
+          <span className="text-sm text-slate-500">{date}</span>
         </div>
-        <MdOutlinePushPin onClick={onPinNote} size={20} />
+        <MdOutlinePushPin
+          onClick={onPinNote}
+          size={22}
+          className={`${isPinned ? "text-blue-600" : "text-slate-400"}`}
+        />
       </div>
-
-    <p className='font-light text-base'>{content?.slice(0,60)}</p>
-      <div>
-        {tags}
-      </div>
-        <div className='flex'>
-          <MdCreate size={20} />
-          <MdDelete size={20} />
+      <div className="flex justify-between mt-2">
+        <div>
+          <p className="font-light text-base">{content?.slice(0, 60)}</p>
+          <div>{tags}</div>
         </div>
+        <div className="flex gap-3 mt-5">
+          <MdCreate
+            size={22}
+            className=" text-slate-400 hover:text-green-400"
+          />
+          <MdDelete size={22} className="text-slate-400 hover:text-red-500" />
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Notecard
+export default Notecard;
