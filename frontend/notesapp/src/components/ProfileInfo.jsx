@@ -9,7 +9,7 @@ export default function ProfileInfo({ logout }) {
       </div>
       <div>
         <p className="font-semibold">John William</p>
-        <button className="underline">Logout</button>
+        <button onClick={logout} className="underline">Logout</button>
       </div>
     </div>
   );
