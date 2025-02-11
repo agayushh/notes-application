@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import Notecard from "../components/Notecard";
 import { MdAdd } from "react-icons/md";
@@ -51,10 +51,10 @@ export default function Home() {
             onPinNote={() => {}}
           />
         </div>
-        <AddEditNotes />
         <button className="h-16 w-16 flex items-center justify-center absolute bg-black hover:bg-gray-800 bottom-10 right-10 rounded-xl">
           <MdAdd className="text-white" size={40} />
         </button>
+        <AddEditNotes />
       </div>
     </div>
   );
