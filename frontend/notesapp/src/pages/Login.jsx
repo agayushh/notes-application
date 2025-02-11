@@ -13,7 +13,13 @@ export default function Login() {
     e.preventDefault();
     if (!validateEmail(email)) {
       setError("Invalid email id");
+      return;
     }
+    if (!password) {
+      setError("Please enter the password");
+      return;
+    }
+    setError("");
   };
 
   return (
