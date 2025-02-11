@@ -4,16 +4,15 @@ import PasswordInput from "../components/PasswordInput";
 import { Link } from "react-router-dom";
 
 export default function Signup() {
-  const[name, setName] = useState("")
-  const[email, setEmail] = useState("")
-  const[password, setPassword] = useState("")
-  const[error, setError] = useState(null)
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState(null);
 
-
-  const handleSignup = (e)=>{
+  const handleSignup = (e) => {
     e.preventDefault();
+  };
 
-  }
   return (
     <div>
       <Navbar />
@@ -21,7 +20,7 @@ export default function Signup() {
       <div className="flex justify-center items-center mt-[-100px] h-[80vh]">
         <div className="w-[520px] rounded-xl border p-10 mt-52">
           <form action="" onSubmit={handleSignup}>
-            <h1 className="text-4xl mb-7">Login</h1>
+            <h1 className="text-4xl mb-7">Sign Up</h1>
             <div className="flex flex-col gap-y-5">
               <input
                 type="text"
@@ -53,14 +52,14 @@ export default function Signup() {
                 type="submit"
                 className="bg-black text-white p-2 rounded-lg hover:bg-slate-600"
               >
-                Login
+                Sign Up
               </button>
             </div>
             <p className="text-sm mt-4">
-              Haven&apos;t registered yet?
+              Already have an account?
               <br />
-              <Link to="/signup" className="font-medium underline">
-                Create an account
+              <Link to="/login" className="font-medium underline">
+                Login
               </Link>
             </p>
           </form>
