@@ -4,7 +4,7 @@ export default function AddEditNotes() {
   return (
     <div className="flex justify-center">
       <div className="flex flex-col gap-2  border-2 mt-5 w-1/2 p-4 ">
-        <form className="flex flex-col" onSubmit={handleSubmit}>
+        <form className="flex flex-col">
           <label>Title</label>
           <input
             type="text"
