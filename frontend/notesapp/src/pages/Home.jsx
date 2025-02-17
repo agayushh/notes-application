@@ -5,6 +5,8 @@ import { MdAdd } from "react-icons/md";
 import AddEditNotes from "./AddEditNotes";
 import ReactModal from "react-modal";
 
+//this is the exact homepage
+
 export default function Home() {
   const [openAddEditModal, setOpenAddEditModal] = useState({
     isShown: false,
@@ -65,19 +67,21 @@ export default function Home() {
         >
           <MdAdd className="text-white" size={40} />
         </button>
-        <ReactModal
-          isOpen={openAddEditModal.isShown}
-          onRequestClose={() => {}}
-          style={{
-            overlay: {
-              backgroundColor: "rgba(0,0,0,0.2)",
-            },
-          }}
-          contentLabel=""
-          className="w-[80%] text-center ml-40 mt-52"
-        >
-          <AddEditNotes />
-        </ReactModal>
+        <div className="flex justify-center items-center">
+          <ReactModal
+            isOpen={openAddEditModal.isShown}
+            onRequestClose={() => {}}
+            style={{
+              overlay: {
+                backgroundColor: "rgba(0,0,0,0.2)",
+              },
+            }}
+            contentLabel=""
+            className=" text-center ml-10 mt-52"
+          >
+            <AddEditNotes />
+          </ReactModal>
+        </div>
       </div>
     </div>
   );

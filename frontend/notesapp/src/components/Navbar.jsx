@@ -12,7 +12,6 @@ export default function Navbar() {
 
   const handleSearch = () => {
     setSearchQuery("");
-    console.log("hi");
   };
 
   return (

@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 
+
 const routes = (
   <Router>
     <Routes>
@@ -17,7 +18,9 @@ const routes = (
 
 function App() {
 
-  return <div>
+
+  return 
+  <div>
     {routes}
   </div>;
 }

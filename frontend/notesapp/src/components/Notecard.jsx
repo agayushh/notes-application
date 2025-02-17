@@ -1,6 +1,8 @@
 import React from "react";
 import { MdCreate, MdDelete, MdOutlinePushPin } from "react-icons/md";
 
+//this is a single note card which will be displayed on the homepage
+
 const Notecard = ({
   title,
   date,
