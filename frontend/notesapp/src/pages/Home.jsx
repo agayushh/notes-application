@@ -17,7 +17,7 @@ export default function Home() {
     <div>
       <Navbar />
       <div className="mx-auto container">
-        <div className="grid grid-cols-3 gap-4 mt-8">
+        <div className="mt-8 flex justify-evenly flex-wrap">
           <Notecard
             title="Meeting on 7th"
             date="7th april 2025"
@@ -70,16 +70,28 @@ export default function Home() {
         <div className="flex justify-center items-center">
           <ReactModal
             isOpen={openAddEditModal.isShown}
-            onRequestClose={() => {}}
+            onRequestClose={() => {
+              setOpenAddEditModal({ isShown: false, type: "add", data: null });
+            }}
             style={{
               overlay: {
                 backgroundColor: "rgba(0,0,0,0.2)",
               },
             }}
             contentLabel=""
-            className=" text-center ml-10 mt-52"
+            className="text-center ml-10 mt-52"
           >
-            <AddEditNotes />
+            <AddEditNotes
+              type={openAddEditModal.type}
+              noteData={openAddEditModal.data}
+              onClose={() => {
+                setOpenAddEditModal({
+                  isShown: false,
+                  type: "add",
+                  data: null,
+                });
+              }}
+            />
           </ReactModal>
         </div>
       </div>
