@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 import PasswordInput from "../components/PasswordInput";
 import { validateEmail } from "../utils/helper";
@@ -24,9 +23,7 @@ export default function Login() {
 
   return (
     <div>
-      <Navbar />
-
-      <div className="flex justify-center items-center mt-[-100px] h-[80vh]">
+      <div className="flex justify-center items-center h-[80vh]">
         <div className="w-[520px] rounded-xl border p-10 mt-52">
           <form action="" onSubmit={handleLogin}>
             <h1 className="text-4xl mb-7">Login</h1>
